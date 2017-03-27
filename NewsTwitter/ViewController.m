@@ -7,23 +7,44 @@
 //
 
 #import "ViewController.h"
+#import "PostsViewController.h"
+
 
 @interface ViewController ()
 
 @end
 
-@implementation ViewController
+@implementation ViewController 
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+   // [self searchUserForName];
 }
 
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"searchUser"])
+    {
+        
+        
+        
+               PostsViewController *vc = [segue destinationViewController];
+               vc.searchUserName = _searchUser.text;
+        
+    }
+}
+
+
+
+
 
 
 @end

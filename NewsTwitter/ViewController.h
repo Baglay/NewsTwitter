@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *text;
+
+@property (weak, nonatomic) IBOutlet UITextField *searchUser;
+
 
 
 @end
